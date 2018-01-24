@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How to </title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<style>
+    #imageholder { display: block; width:200px; height: 200px; } 
+    #imageholder img { width:100%; height: auto; }
+    
+    .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    border: 1px solid #000000;
+    background: red;
+    font-weight: normal;
+    color: #ffffff;
+}
+    </style>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>		  
+<script>
+
+$(function(){
+    $('#accordion').accordion();
+
+    
+    $('#vimeovid').hide();
+    //$('body').html('JQUERY LOADED');
+    $('#imagereveal').on('click', function(e){
+
+    $('#imageholder').html('<img src="http://www.cicis.com/media/1138/pizza_trad_pepperoni.png" />');
+        $('#accordion').accordion();
+
+        return false;
+}); 
+        
+    $('body').click(function(){ 
+    $('#vimeovid').show();
+    });
+    
+    $('#expand').click(function(){
+    $('.ui-accordion-content').css("display","block");
+    });
+    
+    $('#contract').click(function(){
+    $('.ui-accordion-content').css("display","none");
+    });
+    
+    $('.colorchanger').mouseover(function(){
+        $('.ui-state-default').css('background', $(this).text() );
+    });
+   $('#jeep').mouseover(function(){
+    var title = $(this).attr('title');
+    $('body').prepend(title);
+    });
+   
+    $('#jeep').click(function(){
+    $('#replacehtml').html('<img src="' + $(this).attr('src') + '" >');
+    });
+});
+
+
+   
+    
+    </script>
+</head>
+<body>
+   <header>
+       <h1>How to do something</h1>
+   </header>
+    <main>
+    <p id="replacehtml">Replace me</p>
+    <img id="jeep" width="200" src="https://blog.jeep.com/wp-content/uploads/2017/03/16487663_10156730120161515_7984841347332865597_o.jpg" title="This is a jeep">
+    <a class="colorchanger" href="#">red</a>
+    <a class="colorchanger" href="#">blue</a>
+    <a class="colorchanger" href="#">brown</a>
+    <a class="colorchanger" href="#">black</a>   
+        <section>
+
+<a href="#" id="expand">Expand All</a>
+<a href="#" id="contract">Contract All</a>
+            <h2>Instructions</h2>
+            <div id="accordion">
+               <!-- Step 1 -->
+                <h3>Step 1</h3>
+                <div>Step 1 Content</div>
+                <!-- /step 1 -->
+                
+                <!-- Step 2 -->
+                <h3>Step 2</h3>
+                <div>Step 2 Content</div>
+                <!-- /step 2 -->
+                
+                <!-- Step 3 -->
+                <h3>Step 3</h3>
+                <div>Step 3 Content</div>
+                <!-- /step 3 -->
+                
+                <!-- Step 4 -->
+                <h3>Step 4</h3>
+                <div>Step 4 Content</div>
+                <!-- /step 4 -->
+                
+                <!-- Step 5 -->
+                <h3>Step 5</h3>
+                <div>Step 5 Content
+                <a href="#" id="imagereveal">See final product!</a>
+                <span id="imageholder"> </span>
+                </div>
+                <!-- /step 5 -->
+            </div>
+            
+            
+        </section>
+    </main>
+    <footer>
+        <h5>This is the footer</h5>
+    </footer>
+    
+</body>
+</html>

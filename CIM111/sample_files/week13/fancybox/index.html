@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="jquery.fancybox.min.css">
+    <script>
+    $(function(){
+        //Imdividual Images
+        $('#single_1').fancybox();    
+        $('#single_2').fancybox();
+        $('#single_3').fancybox();
+        $('#single_4').fancybox();
+        
+        
+        //Images with the same class are grouped as a slideshow
+        $(".fancybox").fancybox();
+    });
+    </script>
+</head>
+<body>
+<h1>Individual Images</h1>
+<a id="single_1" href="http://farm9.staticflickr.com/8140/30366640446_eb359921c5_b.jpg" title="Morning on Camaret (Tony N.)">
+	<img src="http://farm9.staticflickr.com/8140/30366640446_eb359921c5_m.jpg" alt="" />
+</a>
+<a id="single_2" href="http://farm1.staticflickr.com/756/22625719192_fdc3369588_b.jpg" title="Transparence (delphine.cury)">
+	<img src="http://farm1.staticflickr.com/756/22625719192_fdc3369588_m.jpg" alt="" />
+</a>
+<a id="single_3" href="http://farm9.staticflickr.com/8542/29466009773_a809b99d19_b.jpg" title="aletsch (|| | | gamma | | ||)">
+	<img src="http://farm9.staticflickr.com/8542/29466009773_a809b99d19_m.jpg" alt="" />
+</a>
+<a id="single_4" href="http://farm2.staticflickr.com/1514/23919332220_60b7867d60_b.jpg" title="the forest at dawn (Luca-Anconetani)">
+	<img src="http://farm2.staticflickr.com/1514/23919332220_60b7867d60_m.jpg" alt="" />
+</a>
+
+
+<h1>Grouped Images</h1>
+<a class="fancybox" rel="gallery1" href="http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_b.jpg" title="Twilight Memories (doraartem)">
+	<img src="http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_m.jpg" alt="" />
+</a>
+<a class="fancybox" rel="gallery1" href="http://farm2.staticflickr.com/1459/23610702803_83655c7c56_b.jpg" title="Electrical Power Lines and Pylons disappear over t.. (pautliubomir)">
+	<img src="http://farm2.staticflickr.com/1459/23610702803_83655c7c56_m.jpg" alt="" />
+</a>
+<a class="fancybox" rel="gallery1" href="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg" title="Morning Godafoss (Brads5)">
+	<img src="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_m.jpg" alt="" />
+</a>
+<a class="fancybox" rel="gallery1" href="http://farm4.staticflickr.com/3691/10185053775_701272da37_b.jpg" title="Vertical - Special Edition! (cedarsphoto)">
+	<img src="http://farm4.staticflickr.com/3691/10185053775_701272da37_m.jpg" alt="" />
+</a>
+</body>
+</html>
