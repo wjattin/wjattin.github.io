@@ -14,9 +14,9 @@
 </head>
 
 <body>
-  <script type="text/javascript">
-    $(load('common/header.html'));
-  </script>
+  <div class="h_place">
+
+  </div>
 
         <div class="container theme-showcase" role="main">
             <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -313,10 +313,14 @@ Class Site: </strong>https://wjattin.github.io/CIM111
                 });
                 $('body').find('.jumbotron').find('h1').html('Week  ' + weeks[weekNumber]);
 
+                $('.h_place').load('common/header.html');
+                $('.f_place').load('common/footer.html');
             });
             </script>
         </div>
-        <?php include('common/footer.php'); ?>
+<div class="f_place">
+  
+</div>
 </body>
 
 </html>
