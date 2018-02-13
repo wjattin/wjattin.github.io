@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather Widget</title>
+    <style media="screen">
+      ul#forecast li { list-style-type: none; width: 120px; display: block; height: 350px; float: left; position: relative; margin: 10px; padding: 10px}
+      ul#forecast li img {  clear: right; width:120px; }
+      .name { font-weight: bold; font-size: 16px; background: #f1f1f1; text-align: center;}
+      .detail { font-style: italic; font-size: 14px; background: #FFCCFF; height: 100px;}
+      .now { background: green; color: white}
+      .now .name { background: #000000}
+      h4 { text-align: center; font-size: 24px;  width: 110px; padding-right: 10px;}
+
+    </style>
+  </head>
+
+
+  <body>
+
+    <p>Weather Widget</p>
+    <h1>Forecast</h1>
+    <h2 id="currentTemp"></h2>
+    <ul id="forecast">
+
+    </ul>
+
+    <script src="js/zepto.min.js"></script>
+    <script src="js/underscore.min.js"></script>
+    <script>
+
+      $.getJSON("https://api.weather.gov/points/25.7476,-80.2595", // add 'forecast' URL here
+        function(data) {
+          // your code goes here
+          //"forecast", "forecastHourly"
+          console.log(data.properties.forecast);
+          $.getJSON(data.properties.forecast, // add 'forecast' URL here
+            function(forcast) {
+              // your code goes here
+              console.log(forcast.properties.periods);
+
+              var currentTime = new Date();
+
+              _(forcast.properties.periods).each(
+                function(weather) {
+                  //
+                  //Check for units
+                  var degrees = '\u2109';
+
+                  var tempName = document.createElement("h3");
+                  tempName.className = 'name';
+
+                  var tempDetail = document.createElement("li");
+                  tempDetail.className = 'detail';
+
+                  var tempTemp = document.createElement("h4");
+
+                  var tempIcon = document.createElement("img");
+
+                  var startTime = new Date(weather.startTime);
+                  var endTime = new Date(weather.endTime);
+                  if ( (currentTime < endTime) && (currentTime > startTime)){
+                    tempDetail.className = 'detail now';
+
+                  }
+
+                  tempName.append(weather.name);
+                  tempDetail.append(tempName);
+                  if(weather.temperatureUnit != 'F'){
+                    tempTemp.append(weather.temperature + weather.temperatureUnit);
+                  }
+                  else {
+                    //Nice F with degree symbol
+                  tempTemp.append(weather.temperature + degrees);
+                  }
+                  tempDetail.append(tempTemp);
+
+                  tempDetail.append(weather.detailedForecast);
+                  tempIcon.src = weather.icon;
+                  tempDetail.prepend(tempIcon);
+
+
+
+
+
+
+                  document.getElementById('forecast').appendChild(tempDetail);
+                  console.log(weather.name);
+                  console.log(weather.detailedForecast);
+                }
+              );
+
+            }
+          );
+
+          $.getJSON(data.properties.forecastHourly, // add 'forecast' URL here
+            function(forecastHourly) {
+              // your code goes here
+              console.log(forecastHourly.properties.periods);
+            }
+          );
+
+        }
+      );
+
+    </script>
+  </body>
+</html>

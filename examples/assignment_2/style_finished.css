@@ -1,0 +1,157 @@
+
+/* element selectors are specified with the name of the element and will affect all elements matching that tag.  */
+body {
+  background: #a7ffeb url('images/beach.jpeg') top center no-repeat;
+  background-size: cover;
+  }
+main {
+  width:800px;
+  border: 1px dotted black;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255,255,255,0.5)
+}
+section {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+table {
+  width:100%;
+  border: 10px dashed #b3e5fc;
+  margin-bottom: 100px;
+  border-spacing: 0;
+  padding: 10px;
+  font-family: 'Rock Salt';
+}
+
+table td, table th { text-align: center; padding: 5px;}
+/* change all the table rows backgrounds*/
+table tr { background-color: #FFFFFF; }
+/* change only the first tr of the table */
+table tr:first-child { background-color: #cccccc; }
+/* change even row background */
+table tr:nth-child(2n) { background-color:#b3e5fc ; }
+
+/* Boxing things with aside, figure and block quote */
+
+/* 1. Everything in this model will be inside <aside> so we give it a width. */
+aside {
+  width:800px;
+  border: 1px dotted black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  clear: both;
+}
+/* 2. We align the figure to the left of the box with "float: left"
+This declaration causes the element following the <figure> to 'stick' to the left.
+ */
+figure {
+  width: 40%;
+  margin: 5%;
+  float: left;
+  text-align: center;
+}
+/* 3. We align the blockquote to the left of the box with "float: right"
+This declaration causes the element following the <figure> to 'stick' to the right of
+it's parent.
+ */
+blockquote {
+  margin: 5%;
+  width: 40%;
+  float: right;
+  padding: 0;
+  text-align: justify;
+  font-family: sans-serif;
+}
+ul{
+  list-style-type: square;
+  color: #FFcc00;
+}
+ul li *{
+  color: black;
+}
+/* 4. We create a clearing element to break any additional floats and adjust
+the height of the parent container. */
+p.clear { clear: both; line-height: 0; height: 0; text-align: center;}
+
+figure img { border: 5px solid white}
+/* Class selectors begin with '.' and can be applied to any tag.  */
+.saltlife, h3, li, h4, figcaption {
+    font-family: 'Rock Salt', cursive;
+  }
+.anton {
+    font-family: 'Anton', sans-serif;
+    background: #b3e5fc;
+    border: 2px dotted white;
+    padding: 25px;
+    color: white;
+    letter-spacing: 2px;
+    line-height: 30px;
+  }
+
+  p.anton {
+    font-size: 72px;
+    text-align: center;
+    padding: 40px;
+    background: #a7ffeb url('images/beach.jpeg') center center no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+.largetext { font-size: 36px; }
+
+.mediumtext { font-size: 25px;}
+
+.centertext { text-align: center;}
+
+.rotateexample {
+  -webkit-transform: rotate(90deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(90deg);  /* IE 9 */
+          transform: rotate(90deg);  /* Firefox 16+, IE 10+, Opera  */
+}
+.nopadding { padding: 0 !important;}
+.nomargin { margin: 0 !important;}
+/* Id selector begins with '#' and can be applied only to one element. */
+#maintitle {
+  text-align: center;
+  color:  #2196f3;
+  width: 600px;
+  min-height: 100px;
+  border: 2px solid #2196f3;
+  padding: 5%;
+  margin: 50px;
+  /* Setting right and left margins to auto centers this element. */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Text Background Knockout Technique */
+  font-size: 40px;
+  text-align: center;
+  padding: 40px;
+  background: #a7ffeb url('images/beach.jpeg') center top no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+}
+#maintitle span {
+  -webkit-text-fill-color: #2196f3;
+
+ }
+/* Styling the navigation  */
+#navigation { list-style-type: none; margin-left: 10px; margin-right: 10px;}
+#navigation li { display: inline-block; margin-right: 25px; }
+/* Remove underline from links */
+#navigation li a {
+  text-decoration: none;
+  text-shadow: 1px 1px 3px #2196f3; /* Chrome, Firefox 3.5+, IE 10+, Opera 9+, Safari 1+ */
+  color: white;
+  font-size: 14px;
+}
+/* Add underline only when hovering */
+#navigation li a:hover { text-decoration: underline; color:#FF9900}
+
+#lakeimage {
+  width: 100%;
+}
