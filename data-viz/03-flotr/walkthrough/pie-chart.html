@@ -18,8 +18,34 @@
       var scoring = [
         {data: [[0,270]], label: "Offense"},
         {data: [[1,96]], label: "Special Teams"},
-        {data: [[2,12]], label: "Defense"}
+        {data: [[2,12]], label: "Defense",pie:{explode:40}}
       ];
+      window.onload = function(){
+        Flotr.draw(
+          document.getElementById('chart'),
+          scoring,
+          {
+            pie:{ show: true,
+            explode:1,
+            shadowSize:0,
+            fillOpacity:1,
+          labelFormatter: function(pie,slice){
+            return slice + ' points (' + (slice/pie * 100).toPrecision(3) + ' %)'
+
+          } },
+            yaxis: {
+              showLabels:false
+            },
+            xaxis: {
+              showLabels:false
+            },
+            grid: {
+              horizontalLines:false,
+              verticalLines:false
+            }
+          }
+        )
+      }
     </script>
 
   </body>
