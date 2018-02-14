@@ -1,0 +1,13 @@
+body {
+  font-family: sans-serif;
+}
+
+#chart {
+  width: 600px;
+  height: 400px;
+}
+.flotr-axis-title-y1 {
+  transform: rotate(270deg);
+}
+.flotr-grid-label-x { padding: 5px; }
+.flotr-grid-label-y.first { display: none }
