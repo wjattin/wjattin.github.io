@@ -1,0 +1,23 @@
+/*
+
+    font-family: 'Indie Flower', cursive;
+
+    font-family: 'Nanum Pen Script', cursive;
+
+ */
+.greentext {
+  color: green;
+}
+#maintitle {
+  text-decoration: underline;
+  color: red;
+  font-family: 'Indie Flower', cursive;
+}
+a {
+  color: brown;
+  text-decoration: none;
+}
+a:hover {
+text-decoration: underline;
+}
+a:visited { }
