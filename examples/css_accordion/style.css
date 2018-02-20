@@ -1,0 +1,40 @@
+/* Fun with :hover selector */
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.accordion li .content {
+  /*display: none;*/
+  height: 0;
+  overflow: hidden;
+}
+.accordion li:hover .content {
+
+  padding: 25px;
+  line-height: 20px;
+  border: 1px dotted #CCCCCC;
+  animation-name: opencontent;
+  animation-duration: 1s;
+  height: 300px;
+
+}
+.activator {
+  display: block;
+  padding: 10px;
+  color: white;
+  background: #FFCC00; }
+
+.accordion li span {
+  cursor: nesw-resize;
+  border-bottom: 2px solid #FF9900;
+}
+/* The animation code */
+@keyframes opencontent {
+   0%   {height: 1px;}
+   100% {
+     height: 300px;
+   overflow: visible;
+ }
+}
