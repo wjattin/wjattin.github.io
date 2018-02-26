@@ -4,5 +4,3 @@ font-size: 32px;
 padding-top: 15px;
 padding-bottom: 15px;
 }
-.parent:hover .dropdown, parent:focus .dropdown { display: block;}
-.dropdown { display: none;}
