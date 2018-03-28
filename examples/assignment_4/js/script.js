@@ -1,6 +1,6 @@
 $(function(){
   //Hide stuff
-  $('#getStarted, #finish, #previous, .hide').hide();
+  $('#getStarted, #finish, #previous, .hide, #survey').hide();
   //alert("hello");
   $('#title').on('mouseover',function(){
     $('.fa-arrow-alt-circle-left').toggleClass('fa-arrow-alt-circle-right');
@@ -15,9 +15,30 @@ $(function(){
     $('.hide').show();
     $('#getStarted').hide();
   });
+
   $('#finish').on('click',function(){
     $('.hide, #next, #previous, #finish').hide();
+    $('#survey').show();
     // to do more....
+  });
+
+  //Survey
+  $('#yes').on('click',function(){
+    $('#surveytitle').css("background-color","green");
+    //change multiple css properties notice {} and :
+    $('#survey').css({
+      "border":"1px solid green",
+      "background":"#ccc"
+    });
+  });
+  $('#no').on('click',function(){
+    $('#surveytitle').css("background-color","red");
+    //change multiple css properties notice {} and :
+    $('#survey').css({
+      "border":"1px solid red",
+      "background":"#FFFFFF"
+      // rgb(255,255,255)
+    });
   });
 
   $('#next').on('click',function(){
