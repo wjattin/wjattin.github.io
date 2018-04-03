@@ -10,9 +10,9 @@
   <body>
   <div class="wrapper">
     <h1>Welcome to the
-      <span class="three Fascinate">3</span>
-      <span class="zero Fascinate">0</span>
-      <span class="five Fascinate">5</span>
+      <span class="three Fascinate number">3</span>
+      <span class="zero Fascinate number">0</span>
+      <span class="five Fascinate ">5</span>
     </h1>
     <div class="banner">
       <ul id="links">
@@ -121,6 +121,44 @@ document.getElementById('links').onclick = function (event) {
 $( function() {
   $( "#tabs" ).tabs();
 } );
+</script>
+
+<!-- Slide and other effects -->
+<script>
+$( function() {
+  // run the currently selected effect
+  function runEffect() {
+    // get effect type from
+    var selectedEffect = 'slide';
+
+    // Most effect types need no options passed by default
+    var options = {};
+    // some effects have required parameters
+    if ( selectedEffect === "scale" ) {
+      options = { percent: 50 };
+    } else if ( selectedEffect === "transfer" ) {
+      options = { to: ".number", className: "ui-effects-transfer" };
+    } else if ( selectedEffect === "size" ) {
+      options = { to: { width: 200, height: 60 } };
+    }
+
+    // Run the effect
+    $( ".number" ).effect( selectedEffect, options, 500, callback );
+  };
+  // Callback function to bring a hidden box back
+  function callback() {
+    setTimeout(function() {
+      $( ".number" ).removeAttr( "style" ).hide().fadeIn();
+    }, 1000 );
+  };
+  // Set effect from select menu value
+  $( ".number" ).on( "mouseover", function() {
+    runEffect();
+    return false;
+  });
+  runEffect();
+});
+
 </script>
   </body>
 </html>
