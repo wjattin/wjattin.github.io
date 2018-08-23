@@ -66,3 +66,5 @@ body {
       -ms-transform: rotate(-27.5deg);
     transform: rotate(-27.5deg);
   display: inline-block;}
+
+  #blueimp-gallery { max-width:500px; margin-left: auto; margin-right: auto; max-height: 300px;}
