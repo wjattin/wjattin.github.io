@@ -1,15 +1,14 @@
 body { margin: 0; padding: 0;}
 .wrapper {
   display: block;
-  background: #CCCCCC;
-  width:1000px;
+  width:100%;
+  max-width:1000px;
   min-height:500px;
   margin-left: auto;
   margin-right: auto;
 }
 nav {
   display: block;
-  background: red;
 }
 
 .navlinks {
@@ -20,15 +19,13 @@ nav {
 }
 .navlinks a {
   text-decoration: none;
-  color: white;
   display: inline-block;
   padding: 10px;
 }
 .left {
   display: inline-block;
   vertical-align: top;
-  background: white;
-  width: 200px;
+  width: 20%;
   min-height: 500px;
   margin-left: 10px;
   margin-bottom: 10px;
@@ -38,17 +35,13 @@ nav {
 .right {
   display: inline-block;
   vertical-align: top;
-  width: 610px;
+  width: 59%;
   min-height: 500px;
-  background: #333333;
-  color: white;
   margin: 20px;
   margin-left: 0;
   padding: 30px;
 }
 footer {
   display: block;
-  background: black;
-  color: white;
   padding: 10px;
 }
