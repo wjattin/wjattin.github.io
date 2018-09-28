@@ -31,15 +31,20 @@ nav {
   margin-bottom: 10px;
   margin: 20px;
   padding: 30px;
+  /* box-sizing: border-box; */
+  /* height: 100%; */
+
 }
 .right {
   display: inline-block;
   vertical-align: top;
-  width: 59%;
+  width: 57%;
   min-height: 500px;
+  /* height: 100%; */
   margin: 20px;
   margin-left: 0;
   padding: 30px;
+  /* box-sizing: border-box; */
 }
 footer {
   display: block;
