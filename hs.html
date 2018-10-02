@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS3</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<style media="screen">
+.slider {
+  width:660px;
+  height: 220px;
+  display: block;
+  /* border: 1px solid red; */
+  outline: none;
+}
+.square {
+  height: 200px;
+  width: 200px;
+  /* border: 1px solid black; */
+  display: block;
+  position: relative;
+  outline: none;
+}
+.controls {
+  border: 1px solid black;
+  display: block;
+  width: 200px;
+  height:200px;
+  background: #000;
+  position: fixed;
+  bottom: -180px;
+}
+.slider h1 { position: absolute; color: red; text-align: center; width: 100%; height: 100%; line-height: 500%; top: 0}
+
+.logo {
+  animation: rotate 2s infinite linear;
+}
+
+.container {
+  display: none;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>
+  </head>
+  <body>
+<div class="slider">
+
+<div class="square">
+    <a href="http://google.com">
+    <img class="logo" src="css3/hc.png" alt="">
+    <h1>COMPANY 1</h1>
+    </a>
+</div>
+  <div class="square">
+    <img class="logo" src="css3/hc.png" alt="">
+    <h1>COMPANY 2</h1>
+  </div>
+  <div class="square">
+    <img class="logo" src="css3/hc.png" alt="">
+    <h1>COMPANY 3</h1>
+  </div>
+  <div class="square">
+    <img class="logo" src="css3/hc.png" alt="">
+    <h1>COMPANY 4</h1>
+  </div>
+  <div class="square">
+    <img class="logo" src="css3/hc.png" alt="">
+    <h1>COMPANY 5</h1>
+  </div>
+  <div class="square">
+    <img class="logo" src="css3/hc.png" alt="">
+    <h1>COMPANY 6</h1>
+  </div>
+</div>
+<div id="cont1" class="container">
+  <h1>Container 1</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab placeat, tenetur vitae doloremque assumenda animi recusandae pariatur adipisci optio. Dolor, natus ad quibusdam maxime illo facere deserunt voluptatibus. Laudantium, doloribus!</p>
+</div>
+<div id="cont2" class="container">
+  <h1>Container 2</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure ducimus ipsa repudiandae ipsam, asperiores sed dicta illo. Porro voluptas repudiandae, repellendus id rerum mollitia tempore repellat! Laborum amet similique voluptatibus.</p>
+</div>
+<div class="controls">
+  <p>
+    <br><br>
+<a class="navicon" data-link="cont2" style="color:white">Help</a>    <br><br>
+<a class="navicon" data-link="cont1" style="color:white">About</a>
+</p>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script>
+          $(function(){
+            $('.slider').slick({
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              arrows: false,
+            });
+          });
+          $('.controls').on('click ', function(){
+            //$(this).css({'bottom' : '0'}).animate();
+            $( this ).animate({
+                //opacity: 0.25,
+                bottom: "0",
+                //height: "toggle"
+              }, 200, function() {
+                // Animation complete.
+              });
+          });
+          $('.controls').on('mouseleave', function(){
+            //$(this).css({'bottom' : '0'}).animate();
+            $( this ).animate({
+                //opacity: 0.25,
+                bottom: "-180px",
+                //height: "toggle"
+              }, 1000, function() {
+                // Animation complete.
+              });
+          });
+          $('.navicon').on('click',function(){
+            $('.container').hide();
+            var dest = $(this).data('link');
+            $('#'+dest).show();
+          });
+        </script>
+  </body>
+</html>
