@@ -1,7 +1,7 @@
 /* Generally, we use a separate css file to specify styles that are applied throughout regardless of window size (viewport)   */
 body { margin: 0; padding: 0;}
 .wrapper {
-  background: #CCCCCC;
+  background: #2D4671;
 }
 nav {
   background: #FF0000;
