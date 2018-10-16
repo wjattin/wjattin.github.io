@@ -1,5 +1,9 @@
 #mainimg { width:150px; }
 
+.circle {
+  border-radius: 280px;
+}
+
 body {
   background: url('../images/gradient.png');
   background-repeat: no-repeat;
@@ -15,7 +19,6 @@ body {
   ul li {
     list-style-type: none;
     display: inline;
-
   }
   ul li a {
     padding: 20px;
