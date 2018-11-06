@@ -10,12 +10,19 @@
         <style>
         .redtext { color: red;}
         .bluetext { color: blue; }
+        .to { display: block; border: 1px solid green; width: 200px; height: 200px;}
+        .from { display: block; border: 1px solid green; width: 50px; height: 50px;}
+        .from img { width:100%; height: 100%;}
         </style>
   </head>
   <body>
     <h1 id="pagetitle">jQuery Stuff</h1>
     <button class="action">Click For red</button>
     <button class="actionblue">Click For blue</button>
+    <div class="from"><img src="pexels-photo-9.jpeg" alt=""></div>
+    <div class="from"><img src="pexels-photo-11.jpeg" alt=""></div>
+    <div class="from"><img src="pexels-photo-15.jpeg" alt=""></div>
+    <div class="to"></div>
     <!-- This is where we put our jquery functions  -->
 <script>
 $(function(){
@@ -38,8 +45,19 @@ $('.actionblue').on('click',function(){
   $('#pagetitle').removeClass('redtext');
   $('#pagetitle').addClass('bluetext');
 });
+var img = '';
 
+$('.from img').on('click',function(){
+   img = $(this).attr('src');
+  console.log(img);
+  $('.to').html('<img src="' + img +'">');
+});
 
+$('.to').on('click',function(){
+  $('.to').html('<img src="' + img +'">');
+  console.log(img);
+
+});
 </script>
   </body>
 </html>

@@ -11,7 +11,7 @@ $(function(){
   $('.totalsteps').html(totalsteps);
 
   //hide all the steps and controls. You can specify multiple things to hide by separating them by a comma.
-  inside of the selector.
+  //inside of the selector.
   $('.steps li, .end, .controls, #prev').hide();
 
 });
@@ -53,7 +53,6 @@ $('#next').on('click' , function(){
 
 // Click on prev
 $('#prev').on('click' , function(){
-
   $(currentslide).hide();
   currentstep--;
   currentslide = $('#step' + currentstep);
@@ -68,6 +67,36 @@ $('#prev').on('click' , function(){
     $('#prev').hide();
   }
 });
+
+$('#finish').on('click', function(){
+  // hide everything again
+  $('.steps li, .controls, #prev').hide();
+  $('.end').fadeIn(1000);
+  $('h1').html('You are done!');
+});
+
+
+$('.stepimg').on('click', function(){
+  $(this).css('width','100%');
+});
+
+$('h1').on('mouseover', function(){
+  $(this).css('color','green');
+});
+
+$('h1').on('mouseleave', function(){
+  $(this).css('color','black');
+});
+$('#end').on('click',function(){
+  location.reload();
+});
+
+
+
+
+
+
+
 
 
 
