@@ -1,0 +1,6 @@
+img { max-width: 100%;}
+.niceborder {
+  padding:10px;
+  border: 2px dotted #cccccc;
+}
+.round { border-radius: 25%; }
