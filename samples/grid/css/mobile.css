@@ -1,3 +1,13 @@
+/* styles.css */
+.primarycolor { color: #351B2E; }
+.secondarycolor { color: #273D1F; }
+.generalcolor { color: #40303C}
+
+.primarybackground { background: #A3919E; }
+.secondarybackground { background: #ABBAA5; }
+.generalbackground { background: #DAD9C2; }
+
+
 .grid {
   display: grid;
   text-align: center;
