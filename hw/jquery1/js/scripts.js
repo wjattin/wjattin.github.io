@@ -29,17 +29,44 @@ $('.start').on('click',function(){
 });
 // Next to advance each slide
 $('.next').on('click',function(){
+  // make the chnage only if we are under our number of steps
   $('#step'+step).hide();
   step++;
-  $('#step'+step).show();
-
-  if(step < 6) {
+  if(step == 2) {
+    $('.prev').show();
+  }
+  if(step == 5){
+    $('.next').hide();
+  }
+  if(step <= 5) {
+    $('#step'+step).show();
     $('#stepinfo').text('Step '+step+': '+ titles[step-1]);
+  } else {
+    step--;
+    $('#step'+step).show();
   }
 
 });
 
+//Previous
 
+$('.prev').on('click',function(){
+  // make the change only if we are under our number of steps
+  $('#step'+step).hide();
+  step--;
+  if(step == 1) {
+    $('.prev').hide();
+  } else {
+    $('.next').show();
+  }
+  if(step >= 1) {
+    $('#step'+step).show();
+    $('#stepinfo').text('Step '+step+': '+ titles[step-1]);
+  } else {
+    step--;
+    $('#step'+step).show();
+  }
+});
 
 
 
