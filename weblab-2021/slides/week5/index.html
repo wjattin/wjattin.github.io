@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CLEAN MARKUP = GOOD KARMA.
+      Hi source code lover,
+
+      you're a curious person and a fast learner ;)
+      Let's make something beautiful together. Contribute on Github:
+      https://github.com/webslides/webslides
+
+      Thanks,
+      @jlantunez.
+    -->
+
+  <!-- SEO -->
+  <title>CSS</title>
+  <meta name="description" content="Introduction to Images on the web">
+
+  <!-- URL CANONICAL -->
+  <!-- <link rel="canonical" href="http://your-url.com/"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/92123ffbf2.js" crossorigin="anonymous"></script>
+  <!-- CSS WebSlides -->
+  <link rel="stylesheet" type='text/css' media='all' href="../static/css/webslides.css">
+  <link rel="stylesheet" type='text/css' media='all' href="../static/css/custom.css">
+
+  <!-- Optional - CSS SVG Icons (Font Awesome) -->
+  <link rel="stylesheet" type='text/css' media='all' href="../static/css/svg-icons.css">
+
+  <!-- SOCIAL CARDS (ADD YOUR INFO) -->
+
+
+  <!-- FAVICONS -->
+  <link rel="shortcut icon" sizes="16x16" href="../static/images/favicons/favicon.png">
+  <link rel="shortcut icon" sizes="32x32" href="../static/images/favicons/favicon-32.png">
+  <link rel="apple-touch-icon icon" sizes="76x76" href="../static/images/favicons/favicon-76.png">
+  <link rel="apple-touch-icon icon" sizes="120x120" href="../static/images/favicons/favicon-120.png">
+  <link rel="apple-touch-icon icon" sizes="152x152" href="../static/images/favicons/favicon-152.png">
+  <link rel="apple-touch-icon icon" sizes="180x180" href="../static/images/favicons/favicon-180.png">
+  <link rel="apple-touch-icon icon" sizes="192x192" href="../static/images/favicons/favicon-192.png">
+
+  <!-- Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#333333">
+
+</head>
+
+<body>
+
+  <main role="main">
+    <article id="webslides" class="horizontal">
+      <!-- Quick Guide
+          - Each parent <section> in the <article id="webslides"> element is an individual slide.
+          - Vertical sliding = <article id="webslides" class="vertical">
+          - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
+        -->
+      <!-- SLIDE 1 INTRO -->
+
+      <section class="aligncenter">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap size-90">
+
+            <img src="../static/images/images.png" alt="html icon" width="900"/>
+
+          <h2 class="text-landing">Images for the web</h2>
+          <p class="text-intro">Image Types and Copyrights</p>
+
+        </div>
+      </section>
+
+      <!-- SLIDE 2  -->
+      <section class="wrap size-80">
+        <h2 class="text-serif bluegreen aligncenter">There are tons of Images on Google.<br>Can I use them? </h2>
+          <div class="grid top-align">
+            <div class="imageUse">
+              <div></div>
+              <!-- <img class="imageUse" src="../static/images/dogs.png" alt="html icon" width="900"/> -->
+            </div>
+
+          </div>
+        <p class="med-text aligncenter">Google will scan the web and brings all related images, regardless of copyright rules.</p>
+      </section>
+
+      <!-- SLIDE 3 -->
+      <section class="wrap size-80">
+        <p class="presentation aligncenter">©</p>
+        <h2 class="text-serif bluegreen aligncenter">What is Copyright?</h2>
+        <p class="big-text aligncenter">Whenever you create something, you have the rights to its autorship. It is granted in the US constitution.</p>
+
+
+        <div class="grid top-align">
+
+          <div class="grid">
+
+          <div class="column">
+            <h3>What does it cover?</h3>
+            <ul>
+              <li>Sound Recordings.</li>
+              <li>Architectural works.</li>
+              <li>Literary works.</li>
+              <li>Musical/Dramatic works.</li>
+              <li>Pantomimes and Choreographic works.</li>
+              <li>Pictorial (images, paintings, drawings, photographs)</li>
+            </ul>
+
+          </div>
+
+          <div class="column">
+            <h3>For how long?</h3>
+            <ul>
+              <li> Copyright covers both published and unpublished works.</li>
+              <li> It covers it through the life of the author plus 70 years after their death.</li>
+            </ul>
+          </div>
+
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <!-- SLIDE 4 -->
+      <section class="wrap size-80">
+        <p class="presentation aligncenter">©</p>
+        <h2 class="text-serif bluegreen aligncenter">What are the rights of the copyright owner?</h2>
+        <p class="big-text aligncenter">Copyright gives you the right to:</p>
+
+
+        <div class="grid top-align">
+
+          <div class="grid">
+
+          <div class="column">
+           <ul>
+              <li>Reproduce and copy the work.</li>
+              <li>Create/Prepare derivative works based upon the work.</li>
+              <li>Distribute copies of the work to the public by selling, leasing, renting or lending.</li>
+              <li>Perform or Display the work publicly either live or as an audio or vide transmission.</li>
+              <li>Authorize others to exercise the previously mentioned rights..</li>
+            </ul>
+
+          </div>
+
+          <div class="column">
+            <h3>How do I know if an image is copyrighted?</h3>
+            <ul>
+              <li>Look for credits in the image (caption, embedded in the photo).</li>
+              <li>Look for a Watermark.</li>
+              <li>Check for the image Metadata. <a href="http://metapicz.com/#landing">Metapix</a></li>
+              <li>Do an image reverse search in <a href="https://tineye.com/">TinEye</a> </li>
+            </ul>
+          </div>
+
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <!-- SLIDE 5 -->
+      <section class="slide-top">
+        <div class="wrap size-80">
+        <img class="aligncenter" src="../static/images/cc-logo.png" />
+        <h2 class="text-serif bluegreen aligncenter">Creative Commons</h2>
+        <p class="med-text aligncenter">A global non-profit organization that enables sharing and reuse of creativity and knowledge through the provision of free legal tools. They offer different licenses:</p>
+
+        <ul class="flexblock features">
+          <li>
+            <div>
+              <img src="../static/images/attribution-icon.png" alt="creative commons attribution icon" class="left padding-2 bg-black margin-r2">
+              <h2 class="primary-color">
+                Attribution
+              </h2>
+              <p class="sm-text">You must give credit and link to the source, provide a link  to the license and indicate if changes were made. <br>
+              <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons License</a></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="../static/images/share-alike.png" alt="creative commons attribution icon" class="left padding-2 bg-black margin-r2">
+              <h2 class="primary-color">
+                ShareAlike
+              </h2>
+              <p class="sm-text">If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original. <br>
+              <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons License</a></p>
+            </div>
+          </li>
+        </ul>
+        <ul class="flexblock features">
+          <li>
+            <div>
+              <img src="../static/images/non-commercial.png" alt="creative commons attribution icon" class="left padding-2 bg-black margin-r2">
+              <h2 class="primary-color">
+                NonCommercial
+              </h2>
+              <p class="sm-text">You must give credit, link to the license and indicate if changes were made. You might <strong>NOT</strong> use the work for commercial purposes <br>
+                <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons License</a></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="../static/images/non-derivatives.png" alt="creative commons attribution icon" class="left padding-2 bg-black margin-r2">
+              <h2 class="primary-color">
+                NoDerivatives
+              </h2>
+              <p class="sm-text">You must give credit, link to the license and indicate if changes were made. If you remix, change or edit the original work you may <strong>NOT</strong> distribute the modified version.<br>
+                <a href="https://creativecommons.org/licenses/by-nd/4.0/">Creative Commons License</a></p>
+            </div>
+          </li>
+        </ul>
+        </div>
+      </section>
+
+
+
+      <!-- The box Model -->
+      <section class="slide-middle">
+        <div class="wrap size-60">
+        <h2 class="text-serif bluegreen aligncenter">Where do I Find Images?</h2>
+
+        <div class="grid top-align">
+
+
+
+            <div class="column">
+              <h4>Free Images</h4>
+              <ul class="padding-t3">
+                <li><a href="https://search.creativecommons.org/">Creative Commons</a></li>
+                <li><a href="https://openclipart.org/">Open Clipart</a></li>
+                <li><a href="https://unsplash.com/">Unsplash</a>
+                  <ul>
+                    <li><a href="https://unsplash.com/license">License</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://www.pexels.com/">Pexels</a>
+                  <ul>
+                    <li><a href="https://www.pexels.com/license/">faq's</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://pixabay.com/">Pixabay</a>
+                  <ul>
+                    <li><a href="https://pixabay.com/service/faq/">faq's</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://www.wpbeginner.com/showcase/16-sources-for-free-public-domain-and-cc0-licensed-images/">More Images</a></li>
+              </ul>
+            </div>
+            <!-- .end .column -->
+              <div class="column">
+                <h4>Purchasing an image license</h4>
+                <ul class="padding-t4">
+                  <li>Even if you pay for an image, it does not mean you can use it anywhere.</li>
+                  <li><a href="https://www.istockphoto.com/">iStockPhoto</a></li>
+                  <li><a href="https://stock.adobe.com/">Adobe Stock</a></li>
+                  <li><a href="https://www.gettyimages.com/">Getty Images</a></li>
+                  <li><a href="https://www.istockphoto.com/help/licenses">Different Licenses.</a></li>
+                  <li><a href="https://www.istockphoto.com/legal/license-agreement#restricted-use">Typical agreement</a></li>
+                  <li>Editorial Images cannot be used to sell o promote a product or business. They can only be used on news-related content. </li>
+                </ul>
+              </div>
+        </div>
+       </div>
+      </section>
+
+        <!-- Slide Image Types -->
+       <section class="slide-top">
+        <div class="wrap size-80 aligncenter">
+          <h2 class="text-serif aligncenter bluegreen">Image Basics</h2>
+          <div class="grid">
+            <div class="column bg-primary">
+              <h4>Raster Images</h4>
+              <ul class="big-text">
+                <li>Made up using a collection of pixels referred to as a bitmap</li>
+                <li>They occupy more space</li>
+                <li>They don't scale up well</li>
+                <li>Formats: jpg, gif, png, tif</li>
+              </ul>
+            </div>
+            <div class="column">
+              <img src="../static/images/downtown.jpg"/>
+              <br><br>
+              <img src="../static/images/kiwi.svg"/>
+            </div>
+            <div class="column bg-black">
+              <h4>Vector Images</h4>
+              <ul class="big-text">
+                <li>Vector Images use mathematical statements to store information</li>
+                <li>Lines and Shapes</li>
+                <li>Scalable</li>
+                <li>Formats: svg, eps, pdf, ai</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Image types -->
+      <section class="slide-center">
+        <div class="wrap size-80">
+          <h2 class="text-serif aligncenter bluegreen">Vector vs. Raster</h2>
+          <div class="grid">
+            <div class="column">
+              <img src="../static/images/vector-raster.png" alt="vector and raster image zoom" width="700">
+            </div>
+            <div class="column">
+              <ul>
+                <li>Vector images are lighter.</li>
+                <li>Vector images can be scaled without losing sharpness.</li>
+                <li>Raster images can display better range of colors blends.</li>
+                <li>They are compatible with all web browsers.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Slide Images -->
+      <section>
+        <div class="wrap size-80">
+          <h2 class="text-serif aligncenter bluegreen">Web Images</h2>
+          <div class="grid center-align">
+            <div class="column">
+              <i class="fas fa-file-image"></i>
+              <h4>
+                <strong>JPG</strong>
+              </h4>
+              <ul>
+                <li>A compressed image format standardized by the Joint Photographic Experts Group (JPEG).</li>
+                <li>It significantly reduces the file size of images</li>
+                <li>Good for photographs</li>
+                <li>Some information is lost in the process</li>
+              </ul>
+            </div>
+            <div class="column">
+              <i class="far fa-file-image"></i>
+              <h4>
+                <strong>PNG</strong></h4>
+              <ul>
+                <li>Image file stored in the Portable Network Graphic (PNG) format</li>
+                <li>Commonly used to store web graphics, digital photographs.</li>
+                <li>Support Transparency</li>
+                <li>Does not degrade the image quality</li>
+                <li>Bigger image size than jpg</li>
+              </ul>
+            </div>
+            <div class="column">
+              <i class="far fa-image"></i>
+              <h4>
+                <strong>SVG</strong>
+              </h4>
+              <ul>
+                <li>SVG stands for Scalable Vector Graphics</li>
+                <li>Used to define vector-based graphics for the Web</li>
+                <li>Images are scalable</li>
+                <li>Graphics do NOT lose any quality if they are zoomed or resized</li>
+              </ul>
+            </div>
+            <div class="column">
+              <i class="far fa-image"></i>
+              <h4>
+                <strong>GIF</strong>
+              </h4>
+              <ul>
+                <li>GIF Stands for Graphics Interchange Format</li>
+                <li>Does not degrade the image quality</li>
+                <li>Can include a maximum of 256 colors</li>
+                <li>Better suited for buttons and banners that do not require a lot of colors.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide Preparing image for web -->
+      <section class="slide-top">
+        <div class="wrap size-80">
+            <h2 class="text-serif aligncenter bluegreen">Preparing your images for the web.</h2>
+        </div>
+        <div class="grid center-align">
+          <div class="column ">
+            <img src="../static/images/image-funnel.png" alt="web files funneling to a phone" width="600">
+          </div>
+          <div class="column">
+          <ul class="padding-t6">
+            <li>As a general rule of thumb, we like our product photos to be a maximum 80-150 KB.</li>
+            <li>For large homepage hero images to be a maximum of 250-350 KB.</li>
+            <li>Image file size is important for site speed's and performance.</li>
+            <li>Every file that's included on your website counts towards your visitor's data usage.</li>
+            <li>Every hour of online streaming in standard definition consumes 1GB; 3GB in HD.</li>
+          </ul>
+          <h5 class="bluegreen padding-t4">Data Storage Units</h5>
+          <ul>
+            <li>1 B = 1 byte</li>
+            <li>1 kB = 1000 bytes</li>
+            <li>1 MB = 1000 kB</li>
+            <li>1 GB = 1000 MB</li>
+          </ul>
+          <h5 class="bluegreen padding-t4">Image Optimization</h5>
+          <li>Photoshop</li>
+          <li><a href="https://shortpixel.com/online-image-compression">ShortPixel</a></li>
+          <li><a href="https://tinypng.com/">TinyPNG</a></li>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide File Structure -->
+      <section class="slide-top">
+        <div class="wrap size-90">
+            <h2 class="text-serif aligncenter bluegreen">File Structure</h2>
+
+        <div class="grid center-align">
+          <div class="column">
+          <ul class="padding-t6">
+            <img src="../static/images/linking.png" alt="web file structure" width="980">
+          </ul>
+          </div>
+          <div class="column ">
+            <ul class="padding-t6">
+              <li>When working on a website you usually deal with many files.</li>
+              <li>Creating a logical structure is key to working efficiently.</li>
+              <li>Create one folder for each web project.</li>
+              <li>Keep all the files used in one website in the same folder.</li>
+              <li>Create separate sub-folders for the different file types used in your website. (CSS, JS, videos, audio, etc.)</li>
+              <li>The File path is the location of a specific file in the file system.</li>
+            </ul>
+          </div>
+
+        </div>
+        </div>
+      </section>
+
+      <!-- Slide Link Types -->
+      <!-- SLIDE 11 - ABOUT LINKS -->
+      <!-- <section class="slide-top">
+        <div class="wrap size-80 aligncenter">
+          <div class="grid">
+          </div>
+          <div class="grid">
+            <div class="column bg-red">
+              <h4><i class="fas fa-times-circle"> </i> <i class="fas fa-times-circle"> </i> <i class="fas fa-times-circle"> </i> Local Links <i class="fas fa-times-circle"> </i> <i class="fas fa-times-circle"> </i> <i class="fas fa-times-circle"> </i> </h4>
+              <p class="big-text"><b>&lt;a href="/Users/username/Documents/GitHub/username.github.io/myPage.html"&gt;</b></p>
+              <ul class="big-text">
+                <li>This is the location of the file in your computer</li>
+                <li>This will work fine while you are working in your local copy</li>
+                <li>When you upload the project to Github, the link will be broken because other people will not be able to access the file in your computer</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- Slides Relative Link -->
+      <section class="slide-center">
+        <div class="wrap">
+          <h2 class="text-serif aligncenter bluegreen">Relative links</h2>
+          <div class="grid">
+            <div class="column">
+              <ul class="big-text padding-t6">
+                <li>This is the location of the file relative to the page your're working on.</li>
+                <li>The file belongs to your site.</li>
+                <li>They share the same URL and there is no need to add the full web address.</li>
+              </ul>
+              <p class="med-text padding-t6">Link from index to page 1</p>
+              <p class="med-text"><b>&lt;a href="page1.html"&gt;</b></p>
+              <p class="med-text">Link from index to contact.html</p>
+              <p class="med-text"><b>&lt;a href="contact/contact.html"&gt;</b></p>
+              <p class="med-text">Link from contact.html to index</p>
+              <p class="med-text"><b>&lt;a href="../index.html"&gt;</b></p>
+            </div>
+            <div class="column">
+              <img src="../static/images/relative-links.png" alt="relative link structure">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slides Absolute Link -->
+      <section class="slide-center">
+        <div class="wrap">
+          <h2 class="text-serif aligncenter bluegreen">Absolute links</h2>
+          <div class="grid">
+            <div class="column">
+              <ul class="big-text padding-t6">
+                <li>These are links you make from a file in your website to a file in the internet.</li>
+                <li>The file belongs does not belong to your site.</li>
+                <li>You have to add the full web address.</li>
+              </ul>
+              <p class="med-text padding-t6">Link from index to miami.edu</p>
+              <p class="med-text"><b><a href="https://miami.edu">&lt;a href="https://miami.edu/"&gt;</b></a></p>
+              <p class="med-text">Link from index to Academics in miami.edu</p>
+              <p class="med-text"><b><a href="https://miami.edu/academics/index.html">&lt;a href="https://miami.edu/academics/index.html"&gt;</a></b></p>
+              <p class="med-text">Link from contact.html to Academics in miami.edu</p>
+              <p class="med-text"><b><a href="https://miami.edu/academics/index.html">&lt;a href="https://miami.edu/academics/index.html"&gt;</a></b></p>
+            </div>
+            <div class="column">
+              <img src="../static/images/absolute-links.png" alt="relative link structure">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide File Guidelines -->
+      <section>
+        <div class="wrap">
+          <div class="grid center-align">
+            <div class="column">
+            <h2 class="text-serif bluegreen">Guidelines</h2>
+              <ul class="description">
+                <li>Keep files organized in folders by file type.</li>
+                <li>Use lowercase for HTML tags, files and folders.</li>
+                <li>Use ( - _ ) instead of spaces to name your files and folders.</li>
+                <li>Save images according to their use to keep a small file size.</li>
+                <li>Check the location of your links.</li>
+              </ul>
+            </div>
+            <div class="column">
+              <h2 class="text-serif bluegreen">Why Index?</h2>
+              <p class="med-text">Most servers are configured to display the <b>index.html</b> by default without having to type the name of the file.</p>
+              <p class="med-text">That's why your homepage will always be index.html</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </article>
+    <!-- end article -->
+  </main>
+
+  <div class="references hide">
+<a href="https://www.freepik.com/free-photos-vectors/design">Design vector created by freepik - www.freepik.com</a>
+  </div>
+  <!-- end main -->
+
+  <!-- Required -->
+  <script src="../static/js/webslides.js"></script>
+  <script>
+    window.ws = new WebSlides();
+  </script>
+
+  <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+  <script defer src="../static/js/svg-icons.js"></script>
+
+</body>
+
+</html>
